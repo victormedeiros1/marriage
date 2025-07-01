@@ -27,6 +27,9 @@ const atualizarContador = () => {
   horas.value = Math.floor((diferenca / (1000 * 60 * 60)) % 24);
   minutos.value = Math.floor((diferenca / (1000 * 60)) % 60);
   segundos.value = Math.floor((diferenca / 1000) % 60);
+
+  // Coloque o contador como title do site
+  document.title = `Faltam ${dias.value} dias, ${horas.value} horas, ${minutos.value} minutos e ${segundos.value} segundos para o nosso casamento!`;
 };
 
 onMounted(() => {
